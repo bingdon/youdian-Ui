@@ -1,0 +1,192 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.bing.youdianmanager.ResgisterActivity$PlaceholderFragment" >
+
+    <RelativeLayout
+        android:id="@+id/resgist_phone_relayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/input_box" >
+
+        <ImageView
+            android:id="@+id/resgist_phone_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/phone_icon" />
+
+        <RelativeLayout
+            android:id="@+id/resgist_send_yanzhengma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/send_yangzheng_sec" 
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/comple_up_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/send_yanzhenma"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/resgist_phone_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/resgist_send_yanzhengma"
+            android:layout_toLeftOf="@+id/resgist_send_yanzhengma"
+            android:layout_toRightOf="@+id/resgist_phone_img"
+            android:ems="10"
+            android:hint="@string/phonenum"
+            android:inputType="phone" >
+
+            <requestFocus />
+        </EditText>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/resgist_yanzhengma_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/resgist_phone_relayout"
+        android:layout_alignRight="@+id/resgist_phone_relayout"
+        android:layout_below="@+id/resgist_phone_relayout"
+        android:background="@drawable/input_box" >
+
+        <ImageView
+            android:id="@+id/resgist_yangzheng_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/yanzhengma_icon" />
+
+        <ImageView
+            android:id="@+id/resgist__yanzheng_clean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/clean" />
+
+        <EditText
+            android:id="@+id/resgist_yangzheng_edti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/resgist__yanzheng_clean"
+            android:layout_toRightOf="@+id/resgist_yangzheng_img"
+            android:ems="10"
+            android:hint="@string/input_yanghznegma" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/resgist_set_password_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/resgist_yanzhengma_layout"
+        android:layout_below="@+id/resgist_yanzhengma_layout"
+        android:background="@drawable/input_box" >
+
+        <ImageView
+            android:id="@+id/resgist_set_pas_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/password_icon" />
+
+        <ImageView
+            android:id="@+id/resgist_set_pas_clean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/clean" />
+
+        <EditText
+            android:id="@+id/resgist_set_pas_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/resgist_set_pas_clean"
+            android:layout_toRightOf="@+id/resgist_set_pas_icon"
+            android:ems="10"
+            android:hint="@string/set_password"
+            android:inputType="textPassword" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/resgist_confir_pas_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/resgist_set_password_layout"
+        android:layout_alignRight="@+id/resgist_set_password_layout"
+        android:layout_below="@+id/resgist_set_password_layout"
+        android:background="@drawable/input_box" >
+
+        <ImageView
+            android:id="@+id/resgist_confir_pas_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/password_icon" />
+
+        <ImageView
+            android:id="@+id/resgist_confir_pas_clean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/clean" />
+
+        <EditText
+            android:id="@+id/resgist_confir_pas_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/resgist_confir_pas_clean"
+            android:layout_toRightOf="@+id/resgist_confir_pas_icon"
+            android:ems="10"
+            android:hint="@string/confir_password"
+            android:inputType="textPassword" />
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/resgist_imgbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resgist_confir_pas_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="74dp"
+        android:background="@drawable/resgist_sec" />
+
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/shop_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <ImageView
+            android:id="@+id/shop_list_shop_img"
+            android:layout_width="112dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/shop_image" />
+
+        <TextView
+            android:id="@+id/shop_list_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/shop_list_shop_img"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/shop_list_shop_img"
+            android:text="Armani" />
+
+        <TextView
+            android:id="@+id/shop_list_shop_captain_name_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/shop_list_shop_name"
+            android:layout_below="@+id/shop_list_shop_name"
+            android:layout_marginTop="5dp"
+            android:text="店长:Wing"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/shop_list_renqi_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/shop_list_shop_captain_name_txt"
+            android:layout_alignBottom="@+id/shop_list_shop_captain_name_txt"
+            android:layout_marginLeft="18dp"
+            android:layout_toRightOf="@+id/shop_list_shop_captain_name_txt"
+            android:text="人气:1000"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/shop_list_shop_address_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/shop_list_shop_captain_name_txt"
+            android:layout_below="@+id/shop_list_shop_captain_name_txt"
+            android:layout_marginTop="5dp"
+            android:text="地址:Madrid"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/shop_list_shop_phone_num_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/shop_list_shop_img"
+            android:layout_alignLeft="@+id/shop_list_shop_address_txt"
+            android:src="@drawable/shop_call" />
+
+        <TextView
+            android:id="@+id/shop_list_shop_phone_num_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/shop_list_shop_phone_num_img"
+            android:layout_marginLeft="0dp"
+            android:layout_toRightOf="@+id/shop_list_shop_phone_num_img"
+            android:text="18888888888"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/shop_list_shop_location_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/shop_list_shop_phone_num_txt"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/shop_list_shop_phone_num_txt"
+            android:src="@drawable/shop_location" />
+
+        <TextView
+            android:id="@+id/shop_list_shop_location_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/shop_list_shop_location_img"
+            android:layout_toRightOf="@+id/shop_list_shop_location_img"
+            android:text="1000km"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

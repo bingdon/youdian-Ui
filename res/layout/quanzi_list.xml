@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/quanzi_list_userhead_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/user_head_defult_img" />
+
+    <TextView
+        android:id="@+id/quanzi_list_userhead_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/quanzi_list_userhead_img"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/quanzi_list_userhead_img"
+        android:text="@string/abc_action_mode_done" />
+
+    <ImageView
+        android:id="@+id/quanzi_list_location_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/quanzi_list_userhead_img"
+        android:layout_alignLeft="@+id/quanzi_list_userhead_txt"
+        android:src="@drawable/location" />
+
+    <TextView
+        android:id="@+id/quanzi_list_location_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/quanzi_list_location_img"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/quanzi_list_location_img"
+        android:text="@string/abc_activity_chooser_view_see_all"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/quanzi_list_goods_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/quanzi_list_location_img"
+        android:layout_below="@+id/quanzi_list_location_img"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/image" />
+
+    <TextView
+        android:id="@+id/quanzi_list_goods_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/quanzi_list_goods_img"
+        android:layout_below="@+id/quanzi_list_goods_img"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:text="春季到货" />
+
+    <TextView
+        android:id="@+id/quanzi_list_time_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/quanzi_list_goods_intro"
+        android:layout_below="@+id/quanzi_list_goods_intro"
+        android:text="1分钟钱"
+        android:textColor="@color/home_txt"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/quanzi_list_comment_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/quanzi_list_time_txt"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/quanzi_comments" />
+
+    <TextView
+        android:id="@+id/quanzi_list_comment_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/quanzi_list_time_txt"
+        android:layout_below="@+id/quanzi_list_time_txt"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="leone:very good!
+corleone:nice" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/quanzi_list_comment_txt"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</RelativeLayout>

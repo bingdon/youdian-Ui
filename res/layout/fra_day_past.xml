@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.bing.youdianmanager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/day_past_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/actionbar" >
+
+        <ImageView
+            android:id="@+id/day_past_home_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/navbar_home" />
+
+        <TextView
+            android:id="@+id/home_app_name_title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/day_past_menu_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/navbar_menu" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/day_past_title_2"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/day_past_title"
+        android:background="@drawable/day_head_bg" >
+
+        <ImageView
+            android:id="@+id/day_past_month_task_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/month_history" />
+
+        <TextView
+            android:id="@+id/day_past_month_task_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/day_past_month_task_img"
+            android:layout_alignTop="@+id/day_past_month_task_img"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/day_past_month_task_img"
+            android:gravity="center_vertical"
+            android:text="@string/month_task"
+            android:textColor="@color/white" />
+
+        <RelativeLayout
+            android:id="@+id/calender_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/day_past_month_task_txt"
+            android:layout_marginRight="17dp"
+            android:background="@drawable/calendar_bg" >
+
+            <TextView
+                android:id="@+id/day_past_cal_ymd_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="22dp"
+                android:text="2014-02-02" />
+
+            <TextView
+                android:id="@+id/day_past_daojishi_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/day_past_cal_ymd_txt"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="14dp"
+                android:text="倒计时100天"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/day_past_sales_money_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/day_past_sales_money_txt"
+                android:layout_centerHorizontal="true"
+                android:text="15"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/home_txt" />
+
+            <TextView
+                android:id="@+id/day_past_sales_money_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/day_past_daojishi_txt"
+                android:layout_below="@+id/day_past_daojishi_txt"
+                android:layout_marginTop="10dp"
+                android:text="@string/toals_sales_cash"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/day_past_line"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/day_past_sales_money_num"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/line" />
+
+            <TextView
+                android:id="@+id/day_past_sales_num_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/day_past_line"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="@string/toals_sales_num"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/day_past_sales_num_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/day_past_sales_num_txt"
+                android:layout_centerHorizontal="true"
+                android:text="100"
+                android:textColor="@color/home_txt" />
+        </RelativeLayout>
+
+        <com.bing.youdianmanager.customview.RoundProgressBar
+            android:id="@+id/day_past_comple_pro"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignLeft="@+id/day_past_month_task_img"
+            android:layout_below="@+id/day_past_month_task_img"
+            android:layout_marginTop="24dp"
+            app:roundColor="@color/home_txt"
+            app:roundProgressColor="@color/abc_search_url_text_normal"
+            app:roundWidth="10dp"
+            app:textColor="@color/white"
+            app:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/day_past_person_count_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true" >
+
+            <RelativeLayout
+                android:id="@+id/day_past_store_in_person_count_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" 
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/day_past_store_in_count_tilte"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/in_store_person_count"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/day_past_store_in_count_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/day_past_store_in_count_tilte"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/num0"
+                    android:textColor="@color/home_txt" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/day_past_try_cloth_count_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" 
+                 android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/day_past_try_cloth_count_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/try_cloth_count"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/day_past_try_cloth_count_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/day_past_try_cloth_count_title"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/num0"
+                    android:textColor="@color/home_txt" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/day_past_comple_count_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" 
+                 android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/day_past_comple_count_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/comple_count"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/day_past_comple_count_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/day_past_comple_count_title"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/num0"
+                    android:textColor="@color/home_txt" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/day_past_mlr_layout"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/day_past_title_2" >
+
+        <ImageView
+            android:id="@+id/day_past_mlr_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/line" />
+
+        <ImageView
+            android:id="@+id/day_past_mlr_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/day_past_mlr" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/day_past_mlr_layout" >
+
+        <RelativeLayout
+            android:id="@+id/day_past_bel_layout0"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" 
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:id="@+id/day_past_renxiao_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/renxiao" >
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/day_past_renxiao_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/day_past_renxiao_layout"
+                android:layout_centerHorizontal="true"
+                android:text="@string/renxiao" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/day_past_bel_layout1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" 
+             android:layout_weight="1">
+
+            <RelativeLayout
+                android:id="@+id/day_past_instore_count_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/count_img" >
+
+                <TextView
+                    android:id="@+id/day_past_in_store_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/num0"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/day_past_in_store_num_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/day_past_instore_count_layout"
+                android:layout_centerHorizontal="true"
+                android:text="@string/in_store_person_count" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/day_past_bel_layout2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" 
+             android:layout_weight="1">
+
+            <RelativeLayout
+                android:id="@+id/day_past_try_per_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/count_img" >
+
+                <TextView
+                    android:id="@+id/day_past_try_per_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="2%"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/day_past_try_per_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/day_past_try_per_layout"
+                android:layout_centerHorizontal="true"
+                android:text="@string/try_per" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/day_past_bel_layout3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+             android:layout_weight="1" >
+
+            <RelativeLayout
+                android:id="@+id/day_past_buy_per_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/count_img" >
+
+                <TextView
+                    android:id="@+id/day_past_buy_per_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="2%"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/day_past_buy_per_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/day_past_buy_per_layout"
+                android:layout_centerHorizontal="true"
+                android:text="@string/buy_per" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
